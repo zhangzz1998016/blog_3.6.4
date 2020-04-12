@@ -9,7 +9,7 @@ from django.utils.html import strip_tags
 
 
 class Category(models.Model):
-    name = models.CharField("分类名",max_length=100)
+    name = models.CharField("分类名"，max_length=100)
 
     class Meta:
         verbose_name = "分类"
@@ -19,7 +19,7 @@ class Category(models.Model):
         return self.name
 
 class Tag(models.Model):
-    name = models.CharField("标签名",max_length=100)
+    name = models.CharField("标签名", max_length=100)
 
     class Meta:
         verbose_name = "标签"
@@ -30,7 +30,7 @@ class Tag(models.Model):
 
 
 class Post(models.Model):
-    title = models.CharField("标题",max_length=70)
+    title = models.CharField("标题"，max_length=70)
     body = models.TextField("正文")
     created_time = models.DateTimeField("创建时间", default=timezone.now)
     modified_time = models.DateTimeField("修改时间")
@@ -63,4 +63,4 @@ class Post(models.Model):
         return self.title
         
     def get_absolute_url(self):
-        return reverse('blog:detail',kwargs={'pk': self.pk})
+        return reverse('blog:detail', kwargs={'pk': self.pk})
