@@ -32,7 +32,7 @@ class Tag(models.Model):
 class Post(models.Model):
     title = models.CharField('标题', max_length=70)
     body = models.TextField('正文')
-    created_time = models.DateTimeField('创建时间')
+    created_time = models.DateTimeField('创建时间', default=timezone.now)
     modified_time = models.DateTimeField('修改时间')
     excerpt = models.CharField(max_length=200, blank=True)
     category = models.ForeignKey(Category, verbose_name='分类', on_delete=models.CASCADE)
