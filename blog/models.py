@@ -1,11 +1,14 @@
-from django.db import models
+import re
 
-# Create your models here.
+import markdown
+from django.contrib.auth.models import User
+from django.db import models
 from django.urls import reverse
 from django.utils import timezone
-from django.contrib.auth.models import User
-import markdown
+from django.utils.functional import cached_property
 from django.utils.html import strip_tags
+from django.utils.text import slugify
+from markdown.extensions.toc import TocExtension
 
 def generate_rich_content(value):
     md = markdown.Markdown(
