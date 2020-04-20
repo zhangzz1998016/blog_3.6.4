@@ -2,7 +2,7 @@
 {% load blog_extras %}
 <!DOCTYPE html>
 <html>
-<head>    
+<head>
     <link href="https://cdn.bootcss.com/highlight.js/9.15.8/styles/github.min.css" rel="stylesheet">
 
 <style>
@@ -104,7 +104,7 @@
         {{ message }}
         </div>
     {% endfor %}
-{% endif %}
+    {% endif %}
 </div>
 <div class="copyrights">Collect from <a href="https://www.cssmoban.com/">网页模板</a></div>
 <div class="copyrights">Modified by <a href="https://zmrenwu.com/">追梦人物的博客</a></div>
@@ -113,13 +113,13 @@
     <div class="container">
         <div class="row">
             <main class="col-md-8">
-                {% block main %}            
-                {% endblock main %}            
-            </main>            
-            <aside class="col-md-4">            
-                {% block toc %}            
+                {% block main %}
+                {% endblock main %}
+            </main>
+            <aside class="col-md-4">
+                {% block toc %}
                 {% endblock toc %}
-            
+
                 {% show_recent_posts %}
                 {% show_archives %}
                 {% show_categories %}
@@ -139,9 +139,7 @@
                 <p class="copyright">&copy 2017 - 采集自<a href="https://www.cssmoban.com/"
                                                         target="_blank" title="模板之家">模板之家</a>
                     - 由<a href="https://zmrenwu.com/" title="网页模板" target="_blank">追梦人物的博客</a>修改
-                    <div class="flex-center">
-                        <div align="center"><a href="http://www.beian.miit.gov.cn/" target="_blank" >蒙ICP备20000788号</a></div>
-                    </div>
+                    <a href="http://www.beian.miit.gov.cn/" target="_blank" >蒙ICP备20000788号</a>
                 </p>
             </div>
         </div>

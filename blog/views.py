@@ -15,10 +15,10 @@ def index(request):
 
 def detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
+    post.increase_views()
     md = markdown.Markdown(extensions=[
         'markdown.extensions.extra',
         'markdown.extensions.codehilite',
-        # 记得在顶部引入 TocExtension 和 slugify
         TocExtension(slugify=slugify),
     ])
     post.body = md.convert(post.body)
