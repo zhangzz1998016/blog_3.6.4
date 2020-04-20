@@ -10,10 +10,11 @@ import re
 from .models import Post, Category, Tag
 from django.views.generic import ListView, DetailView
 
-class IndexView(ListView):
+class IndexView(PaginationMixin, ListView):
     model = Post
     template_name = 'blog/index.html'
     context_object_name = 'post_list'
+    paginate_by = 10
 
 class PostDetailView(DetailView):
     # 这些属性的含义和 ListView 是一样的
