@@ -1,7 +1,7 @@
-from django.shortcuts import render, get_object_or_404
-
+from django.shortcuts import render, get_object_or_404, redirect
+from django.db.models import Q
 # Create your views here.
-
+from django.contrib import messages
 from .models import Post
 import markdown
 from django.utils.text import slugify
