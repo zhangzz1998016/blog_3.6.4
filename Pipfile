@@ -7,7 +7,7 @@ verify_ssl = true
 fabric = "*"
 
 [packages]
-django = "==2.2.3"
+django = "==2.2.28"
 markdown = "*"
 gunicorn = "*"
 django-pure-pagination = "*"
